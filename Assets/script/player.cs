@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class player : MonoBehaviour
 {
     Vector2 mouse; 
-    float moveSpeed = 1.7f;
+    float moveSpeed;
     SpriteRenderer sprite;
     Animator playerworking;
     public bool isdead;
@@ -23,6 +23,7 @@ public class player : MonoBehaviour
     float CoolTime;
     void Start()
     {
+        moveSpeed = 1.7f;
         sprite = GetComponent<SpriteRenderer>();
         playerworking = GetComponent<Animator>();
         playerworking.SetBool("iswalking", false);
